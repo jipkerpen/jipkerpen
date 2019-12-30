@@ -12,7 +12,7 @@ html, body {
 
 main {
     margin: 0 auto;
-    width: 700px;
+    width: 80%;
     position: relative;
 }
 
@@ -31,14 +31,43 @@ header {
 footer {
     text-align: center;
     padding-bottom: 10px;
+    clear: both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 /* specifieke stijlen */
 
-img.zweefLinks {
-    float: left;
+
+#plaatje1 {
+    float: right;
     margin-right: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+#plaatje2 {
+    float: left;
+    padding-top: 80px;
+    padding-bottom: 1px; 
+    clear: both;
+    margin-bottom: 90px;
+
+}
+
+#einde {
+    text-align: right;
+}
+
+#titel {
+    text-align: right;
+    margin-top: 50px;
+
 }
 
 .smalltext {
@@ -53,6 +82,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+h2 {
+    font-size: 1.1em;
+}
+
+.titel {
+    margin-bottom: 1px;
+    margin-top: 25px;
+}
+
+p {
+    margin-top: 1px;
+}
+
+#revolutie {
+    float: right;
+}
+
 
 
 /* navigatiebalk */
@@ -83,7 +130,3 @@ nav li a:hover {
 nav li a.active {
     background-color: skyblue;
 }
-
-
-
-
