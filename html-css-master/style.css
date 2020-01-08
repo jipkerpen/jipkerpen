@@ -1,14 +1,12 @@
-/* Basislayout */
+/* algemeen */
 
 html, body {
     height: 100%;
     padding: 0;
     background-color: #EEEEEE;  
-    
     color: #303030;
-    font: Verdana, Arial, Sans-Serif;
+    font: Helvetica, Verdana, Arial, Sans-Serif;
 }
-
 
 main {
     margin: 0 auto;
@@ -16,71 +14,67 @@ main {
     position: relative;
 }
 
-
 article {
     text-align: justify;
 }
 
-
 header {
     color: skyblue;
     text-align: center;
+    margin-top: 30px;
 }
-
 
 footer {
     text-align: center;
     padding-bottom: 10px;
     clear: both;
+    margin-top: 25px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 
 /* specifieke stijlen */
-
-
-#plaatje1 {
-    float: right;
-    margin-right: 15px;
-    margin-bottom: 30px;
-    margin-left: 10px;
-}
-
-#plaatje2 {
-    float: left;
-    padding-top: 80px;
-    padding-bottom: 1px; 
-    clear: both;
-    margin-bottom: 90px;
-
-}
-
-#einde {
-    text-align: right;
-}
-
-#titel {
-    text-align: right;
-    margin-top: 50px;
-
-}
 
 .smalltext {
     font-size: 0.7em;
 }
 
-a {
-    color: skyblue;
-    text-decoration: none;
-}
-
 a:hover {
     text-decoration: underline;
+    text-decoration-style: dotted;
+    color: red;
+}
+
+a {
+	outline: none;
+	position: relative;
+    text-decoration: none;
+	color: skyblue;
+	display: inline-block;
+	overflow: hidden;
+}
+
+a::after {
+	content: '';
+	position: absolute;
+    height: 10px;
+	width: 100%;
+	top: 50%;
+	margin-top: -5px;
+	right: 0;
+	background: #F9F9F9;
+	transform: translate3d(-100%,0,0);
+	transition: 0.9s;
+}
+
+a:hover::after {
+	transform: translate3d(100%,0,0);
 }
 
 h2 {
@@ -90,24 +84,22 @@ h2 {
 .titel {
     margin-bottom: 1px;
     margin-top: 25px;
+    text-transform: capitalize;
 }
 
 p {
     margin-top: 1px;
 }
 
-#revolutie {
-    float: right;
-}
-
 
 
 /* navigatiebalk */
+
 nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: #dddddd;
+    background-color: steelblue;
     overflow: hidden;
 }
 
@@ -129,4 +121,183 @@ nav li a:hover {
 
 nav li a.active {
     background-color: skyblue;
+}
+
+
+
+/* index.html */
+
+#Qin {
+    float: right;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+#terracottaleger {
+    float: left;
+    padding-top: 80px;
+    padding-bottom: 1px; 
+    clear: both;
+    margin-right: 10px;
+}
+
+#einde {
+    text-align: right;
+}
+
+
+
+/* Ming-dynastie */
+
+#Zhu-Yuanzhang-plaatje {
+    float: right;
+    margin-left: 10px;
+}
+
+#Zhu-Yuanzhang {
+    clear: both;
+}
+
+
+#Zhu-Di-plaatje {
+    width: 160;
+    float: left;
+    margin-right: 10px;
+}
+
+#Zhu-Di-tekst {
+    text-align: right;
+}
+
+#Zhu-Di {
+    clear: both;
+    margin-top: 100px;
+}
+
+
+#verboden-stad-plaatje {
+    float: right;
+    margin-left: 10px;
+    margin-top: 70px;
+    border: solid 5px;
+}
+
+#verboden-stad {
+    clear: both;
+    margin-top: 50px;
+}
+
+
+
+/* de laatste keizer */
+
+.puyi {
+    border-right: solid 5px; 
+    border-left: solid 5px;
+    border-top: solid 5px;
+    border-color: black;
+    position: absolute;
+    overflow: hidden;
+    min-width: 150px;
+    max-width: 150px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+    margin-top: 25px;
+}
+    
+div.puyi figcaption {   
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    opacity: 0;
+}   
+
+div.puyi:hover img {
+    opacity: 0.35;
+}  
+
+div.puyi:hover figcaption {
+    opacity: 1;
+}
+
+#puyi-tekst {
+    float: right;
+    text-align: right;
+    width: 70%;
+}
+
+footer {
+    clear: both;
+}
+
+#abc {
+    margin-bottom: 100px;
+}
+
+
+
+/* Mao Zedong */
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#eerste-jaren {
+    width: 33%;
+}
+
+#revolutie {
+    margin-left: 30px;
+    width: 33%;
+}
+
+#voorwaarts {
+    margin-left: 30px;
+    width: 33%;
+}
+
+.titel2 {
+    margin-top: 1px;
+}
+
+.mao {
+    background-image: url(afbeeldingen/Mao.Zedong.jpg);
+    background-size: cover; 
+}
+
+
+
+
+/* China nu */
+
+#religie-li {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+#economie {
+    border: solid;
+    padding: 10px;
+    border-color: silver;
+}
+
+#politiek {
+    border: solid;
+    padding: 10px;
+    border-color: silver;
+}
+
+#hongkong {
+    border: solid;
+    padding: 10px;
+    border-color: silver;
+}
+
+#religie {
+    border: solid;
+    border-color: silver;
+    padding: 10px;
 }
